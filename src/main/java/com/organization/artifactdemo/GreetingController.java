@@ -3,6 +3,7 @@ package com.organization.artifactdemo;
 
 // Clase para generar identificadores únicos
 import java.util.concurrent.atomic.AtomicLong;
+
 // Anotación para indicar que este método responde a las solicitudes HTTP GET
 import org.springframework.web.bind.annotation.GetMapping;
 // Anotación para indicar que este método recibe un parámetro desde la solicitud
@@ -18,10 +19,12 @@ public class GreetingController {
   // Cadena de formato para los saludos
   private static final String template = "Hello, %s!";
 
-  // Contador atómico para asignar identificadores únicos a los saludos 
+  // Contador atómico para asignar identificadores únicos a los saludos
   private final AtomicLong counter = new AtomicLong();
 
   // Método que responde a las solicitudes HTTP GET en la ruta "/greeting"
+  // http://localhost:8080/greeting
+  // http://localhost:8080/greeting?name=Andrés
   @GetMapping("/greeting")
   public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
     // El método greeting recibe un parámetro 'name' desde la solicitud. Si no se
