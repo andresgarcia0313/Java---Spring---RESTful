@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
   // Cadena de formato para los saludos
-  private static final String template = "Hello, %s!";
+  private static final String template = "Hola, %s!";
 
   // Contador atómico para asignar identificadores únicos a los saludos
   private final AtomicLong counter = new AtomicLong();
@@ -26,7 +26,18 @@ public class GreetingController {
   // http://localhost:8080/greeting
   // http://localhost:8080/greeting?name=Andrés
   @GetMapping("/greeting")
-  public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+  public Greeting greeting(@RequestParam(value = "name", defaultValue = "Mundo") String name) {
+    // El método greeting recibe un parámetro 'name' desde la solicitud. Si no se
+    // proporciona, se utiliza "World" como valor predeterminado.
+
+    // Se crea una nueva instancia de la clase Greeting, utilizando el contador para
+    // asignar un ID único a cada saludo y formateando el mensaje con el nombre
+    // proporcionado.
+    return new Greeting(counter.incrementAndGet(), String.format(template, name));
+  }
+
+  @GetMapping("/saludo")
+  public Greeting saludo(@RequestParam(value = "name", defaultValue = "Nombre") String name) {
     // El método greeting recibe un parámetro 'name' desde la solicitud. Si no se
     // proporciona, se utiliza "World" como valor predeterminado.
 
