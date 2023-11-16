@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
   // Cadena de formato para los saludos
-  private static final String template = "Hola, %s!";
+  private static final String TEMPLATE = "Hola, %s!";
 
   // Contador atómico para asignar identificadores únicos a los saludos
   private final AtomicLong counter = new AtomicLong();
@@ -33,7 +33,7 @@ public class GreetingController {
     // Se crea una nueva instancia de la clase Greeting, utilizando el contador para
     // asignar un ID único a cada saludo y formateando el mensaje con el nombre
     // proporcionado.
-    return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));
   }
 
   @GetMapping("/saludo")
@@ -44,6 +44,6 @@ public class GreetingController {
     // Se crea una nueva instancia de la clase Greeting, utilizando el contador para
     // asignar un ID único a cada saludo y formateando el mensaje con el nombre
     // proporcionado.
-    return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));
   }
 }
