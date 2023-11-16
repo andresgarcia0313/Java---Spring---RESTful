@@ -25,6 +25,7 @@ java -jar target/artifactdemo-0.0.1-SNAPSHOT.jar
 ## Ejecutar Test
 
 mvn test
+`./mvnw surefire-report:report
 
 ## Instalar maven
 
