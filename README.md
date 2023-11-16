@@ -6,10 +6,14 @@
 
 <https://spring.io/guides/gs/rest-service/>
 
-## Compilar y ejecutar
+## Compilar y ejecutar para desarrollo
 
 ./mvnw spring-boot:run
 ./mvnw clean package
+
+## Reportes
+
+./mvnw site
 
 ## Ejecutar
 
@@ -17,6 +21,10 @@ java -jar target/artifactdemo-0.0.1-SNAPSHOT.jar
 
 <http://localhost:8080/greeting>
 <http://localhost:8080/greeting?name=Andrés>
+
+## Ejecutar Test
+
+mvn test
 
 ## Instalar maven
 
