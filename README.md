@@ -1,6 +1,8 @@
 # Extensión vscode
 
 <https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack>
+<https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack>
+<https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack>
 
 ## Guia del presente código
 
@@ -54,3 +56,6 @@ echo "    <groupId>org.springframework.boot</groupId>" >> pom.xml
 echo "    <artifactId>spring-boot-starter-data-jpa</artifactId>" >> pom.xml
 echo "    <version>$version</version>" >> pom.xml
 echo "</dependency>" >> pom.xml
+
+## Actuator
+
