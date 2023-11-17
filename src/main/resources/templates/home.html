@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tu Aplicación</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("/static/images/fondo.png");
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+      }
+
+      nav {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a th:href="@{/}">Inicio</a></li>
+        <li><a th:href="@{/persons}">Lista de Personas</a></li>
+        <li><a th:href="@{/tasks/create}">Crear Tarea</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="section">
+        <h1>Bienvenido a Tu Aplicación</h1>
+        <p>
+          ¡Bienvenido a nuestra aplicación dedicada a la gestión eficiente de
+          nombres de personas y tareas! En este espacio digital, buscamos
+          simplificar tu experiencia al organizar información vital. Con un
+          propósito claro, nuestra aplicación te permite mantener un control
+          preciso sobre las personas registradas y las tareas asociadas.
+          Descubre la comodidad de gestionar tus actividades diarias de manera
+          efectiva y mantenerte al tanto de tus responsabilidades.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Estadísticas</h2>
+        <p>
+          Explorar nuestra aplicación es tan sencillo como comenzar a dar los
+          primeros pasos. En la sección de inicio, encontrarás enlaces rápidos a
+          funciones clave en el menú de navegación, proporcionando acceso
+          directo a áreas esenciales como la "Lista de Personas" y la opción
+          para "Crear Tarea". A través de estos enlaces intuitivos, podrás
+          navegar sin esfuerzo por las funcionalidades centrales de la
+          aplicación, permitiéndote organizar y administrar tus datos de manera
+          eficaz.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Contacto o Ayuda</h2>
+        <p>
+          Tu experiencia es nuestra prioridad, y estamos aquí para ayudarte en
+          cada paso del camino. Si alguna vez necesitas más información o
+          asistencia, no dudes en ponerte en contacto con nosotros. Hemos
+          facilitado la búsqueda de ayuda al proporcionar información de
+          contacto o enlaces a recursos adicionales que te guiarán a través de
+          cualquier consulta que puedas tener. En nuestra búsqueda constante de
+          mejorar tu experiencia, estamos comprometidos a brindar la asistencia
+          necesaria para que aproveches al máximo nuestra aplicación.
+        </p>
+      </div>
+    </div>
+
+    <!-- Agrega tus scripts JavaScript aquí si es necesario -->
+  </body>
+</html>

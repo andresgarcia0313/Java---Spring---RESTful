@@ -1,4 +1,18 @@
-# Extensión vscode
+# Proyecto
+
+## Estructura del proyecto
+
+core: Contiene la esencia de la aplicación, englobando la lógica central compartida entre todos los componentes.
+utils: Almacena funciones de utilidad reutilizables en diversos módulos, facilitando operaciones comunes en todo el sistema.
+services: Aquí reside la implementación de los servicios específicos del negocio, proporcionando funcionalidades clave para la aplicación.
+models o entities: Guarda las entidades o modelos de datos compartidos, definiendo la estructura fundamental de la información.
+repositories: Incluye el código relacionado con la persistencia de datos y el acceso a la base de datos, asegurando la integridad y recuperación eficiente de la información.
+controllers: En entornos web, este paquete podría contener controladores que gestionan las solicitudes HTTP o de interfacez de Thymeleaf
+api: Define y gestiona las API públicas del sistema, estableciendo la interfaz de comunicación entre componentes.
+exceptions o errors: Maneja excepciones y errores comunes, mejorando la robustez y la capacidad de recuperación del sistema.
+middlewares: Contiene la lógica de middleware para aspectos transversales, como la autenticación y la gestión de solicitudes.
+
+## Extensión vscode
 
 <https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack>
 <https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack>
@@ -12,6 +26,18 @@
 
 ./mvnw spring-boot:run
 ./mvnw clean package
+
+## Incidencias?
+
+1. Sprint Boot no carga el contexto de la aplicación durante las pruebas puede ser
+configuraciones, dependencias
+
+Solución:
+
+1.1 Verificar configuraciones
+2.2 Verificar dependencias
+3.3 Verificar dependencias repetidas
+4.4 Limpiar el proyecto y instalarlo en mvn clean install
 
 ## Reportes
 
@@ -58,4 +84,3 @@ echo "    <version>$version</version>" >> pom.xml
 echo "</dependency>" >> pom.xml
 
 ## Actuator
-

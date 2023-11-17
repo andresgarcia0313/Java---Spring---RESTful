@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crear Persona</title>
+  </head>
+  <body>
+    <h2>Crear Persona</h2>
+    <form action="/persons/create" method="post">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+      <button type="submit">Crear</button>
+    </form>
+  </body>
+</html>

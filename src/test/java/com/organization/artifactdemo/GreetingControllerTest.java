@@ -1,7 +1,5 @@
 
 package com.organization.artifactdemo;
-
-// Importación de clases necesarias para las pruebas
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
